@@ -1,0 +1,13 @@
+import yaml
+
+new_config_data = {
+    'version': '1.0.0',
+    'codeOwners': ['0xYourNewAddress'],
+    'quorum': 1
+}
+
+new_file_path = 'path/to/your/new/config/file.yaml'
+with open(new_file_path, 'w') as new_file:
+    yaml.dump(new_config_data, new_file, default_flow_style=False)
+
+print(f"New configuration file created at: {new_file_path}")
